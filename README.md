@@ -187,3 +187,19 @@ running for yb-tserver-n1:5433,yb-tserver-n2:5433,yb-tserver-n3:5433 nodes and  
 5394 [Thread-0] INFO com.yugabyte.sample.common.metrics.MetricsTracker  - Read: 0.00 ops/sec (0.00 ms/op), 0 total ops  |  Write: 475.02 ops/sec (2.09 ms/op), 2376 total ops  |  Uptime: 5025 ms |
 ```
 It will keep simulating the workload until we stop the container. 
+
+### Universal Scalability Law
+
+In order to calculate the USL parameters, follow these steps:
+
+Firstly, go to USL_calculus directory
+
+```
+cd USL_calculus
+```
+
+As the csv is already in repo, there's only the need to run the jar file with this csv file as input
+
+```
+java -jar esle-usl-1.0-SNAPSHOT.jar throughput.csv
+```
