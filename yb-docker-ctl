@@ -38,7 +38,7 @@ class YBDockerControl():
     MEM_LIMIT_BYTES = 1024 * 1024 * 1024
     YB_MASTER_FORMAT = "yb-master-n{}"
     YB_MASTER_PORT = "7100"
-    YB_MASTER_UI_PORT = 7001
+    YB_MASTER_UI_PORT = 7000
     YB_MASTER_FORMAT_WITH_PORT = "{}:{}".format(YB_MASTER_FORMAT, YB_MASTER_PORT)
     YB_TSERVER_FORMAT = "yb-tserver-n{}"
     YB_TSERVER_PORT = "9100"
