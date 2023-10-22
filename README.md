@@ -10,7 +10,7 @@
  6. README.md: repository description and "how to run" instruction. 
 
 ## How to run
-  YugabyteDB is already conteinerized, so there is no need in additional steps to run it in Docker. According to official documentation we can run 1 node cluser like this:
+  YugabyteDB is already conteinerized, so there is no need in additional steps to run it in Docker. According to official documentation we can run 1 node cluser like this:  !Note! In MacOS port 7000 is reserved by AirPlay, change the port to make it work. 
 ```
 docker run -d --name yugabyte  -p7000:7000 -p9000:9000 -p5433:5433 -p9042:9042 yugabytedb/yugabyte:2.19.2.0-b121 bin/yugabyted start --daemon=false
 ```
