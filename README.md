@@ -8,7 +8,8 @@
  4. ESLE-2ndStage-Report.pdf
  5. plots.xlsx: excel file containing benchmark measurements and plots.
  6. README.md: repository description and "how to run" instruction.
- 7. yugabyte-2.18.4.0-b52-linux-x86_64.tar.gz: yugabyte software zipped. There is the need to untar and configure yugabyte as explained below in each VM 
+
+Note: git didn't let us push yugabyteDB software, not even the tar file, so it is necessary to do an extra step as described in next section.
 
 ## How to run a simple 3 node cluster with replication factor of 3 with Google Cloud VM instances
 
@@ -22,7 +23,7 @@ After starting and connecting to the instances via SSH, manually deploy Yugabyte
 sudo apt install python-is-python3
 ```
 
-2. Download YugabyteDB (if you are using this repository, it is already downloaded)
+2. Download YugabyteDB
 ```
 wget https://downloads.yugabyte.com/releases/2.18.4.0/yugabyte-2.18.4.0-b52-linux-x86_64.tar.gz
 ```
