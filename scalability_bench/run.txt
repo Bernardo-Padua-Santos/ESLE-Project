@@ -1,1 +1,0 @@
-docker run -it --net yb-net scale yb-tserver-n1:5433,yb-tserver-n2:5433,yb-tserver-n3:5433 32
