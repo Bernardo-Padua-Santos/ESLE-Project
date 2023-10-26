@@ -7,7 +7,8 @@
  3. ESLE-1stStage-Report.pdf
  4. ESLE-2ndStage-Report.pdf
  5. plots.xlsx: excel file containing benchmark measurements and plots.
- 6. README.md: repository description and "how to run" instruction. 
+ 6. README.md: repository description and "how to run" instruction.
+ 7. yugabyte-2.18.4.0-b52-linux-x86_64.tar.gz: yugabyte software zipped. There is the need to untar and configure yugabyte as explained below in each VM 
 
 ## How to run a simple 3 node cluster with replication factor of 3 with Google Cloud VM instances
 
@@ -21,12 +22,12 @@ After starting and connecting to the instances via SSH, manually deploy Yugabyte
 sudo apt install python-is-python3
 ```
 
-2. Download YugabyteDB
+2. Download YugabyteDB (if you are using this repository, it is already downloaded)
 ```
 wget https://downloads.yugabyte.com/releases/2.18.4.0/yugabyte-2.18.4.0-b52-linux-x86_64.tar.gz
 ```
 
-3. Extract the package
+3. Extract the package and change to yugabyte directory
 
 ```
 tar xvfz yugabyte-2.18.4.0-b52-linux-x86_64.tar.gz && cd yugabyte-2.18.4.0/
@@ -78,7 +79,12 @@ First, install java 8 in instance4
 sudo apt update
 sudo apt install default-jre
 ```
-Then download the workload generator: 
+Then, if you are using this repository change to scalability_benchmark
+```
+cd scalability_Benchmark
+```
+
+Otherwise, download the workload generator: 
 ```
 wget https://github.com/yugabyte/yb-sample-apps/releases/download/v1.4.1/yb-sample-apps.jar -O yb-sample-apps.jar
 ```
@@ -128,18 +134,20 @@ This benchmark will run for about 1 minute giving you many values
 
 This benchmark creates a table and doesn´t drop it in the end, so in order to avoid noise/interference from previous executions follow these steps:
 
-1. connect to ysqlsh
+1. change to yugabyte directory
+
+2. connect to ysqlsh
 
 ```
 ./bin/ysqlsh -h <instance1-internal-ip-addr>
 ```
 
-2. Connect to postgres database
+3. Connect to postgres database
 ```
 yugabyte=# \c postgres
 ```
 
-3. Drop table
+4. Drop table
 ```
 yugabyte=# drop table postgresqlkeyvalue;
 ```
