@@ -2,11 +2,12 @@
 
 ## Repository structure
 
- 1. ESLE-1stStage-Report.pdf
- 2. ESLE-2ndStage-Report.pdf
- 3. USL_calculus: contains app for running linear regression to use its results for Universal Scalability Law analysis and a csv file with some observations. 
- 4. plots.xlsx: excel file containing benchmark measurements and plots.
- 5. README.md: repository description and "how to run" instruction. 
+ 1. USL_calculus: contains app for running linear regression to use its results for Universal Scalability Law analysis and a csv file with some observations. 
+ 2. scalability_benchmark: contains workload generator that runs the benchmark.
+ 3. ESLE-1stStage-Report.pdf
+ 4. ESLE-2ndStage-Report.pdf
+ 5. plots.xlsx: excel file containing benchmark measurements and plots.
+ 6. README.md: repository description and "how to run" instruction. 
 
 ## How to run a simple 3 node cluster with replication factor of 3 with Google Cloud VM instances
 
